@@ -45,7 +45,7 @@ private
     if config.root.join('yarn.lock').exist?
       %w[yarn vite]
     else
-      ["#{ `npm bin`.chomp }/vite"]
+      %w[npx vite]
     end
   end
 end
